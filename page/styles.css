@@ -1,0 +1,101 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background: url(https://cdn.pixabay.com/photo/2016/03/12/23/18/man-1253004__340.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -13;
+    color: #fff;
+}
+.navbar{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    font-size: 2rem;
+    cursor: pointer;
+    color: crimson;
+}
+ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+ul li{
+    list-style: none;
+    font-size: 1.4rem;
+    position: relative;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+ul li::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: aqua;
+    left: 0;
+    bottom: -2px;
+    position: absolute;
+    transition: .5s;
+}
+ul li:hover::after{
+    width: 100%;
+
+}
+.info{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info h3{
+    font-size: 2rem;
+    color: crimson;
+}
+.info p{
+    font-size: 1.4rem;
+    margin: 1rem;
+}
+button{
+    width: 200px;
+    padding: 10px 20px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid aqua;
+    outline: none;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+ 
+}
+span{
+    background: aqua;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+    width: 0;
+    height: 100%;
+    transition: .5s;
+    font-weight: bolder;
+    z-index: 1;
+}
+button:hover span{
+    width: 100%;
+    z-index: -1;
+}button:hover{
+    border: none;
+}
